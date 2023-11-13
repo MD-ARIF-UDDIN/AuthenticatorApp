@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Authentication Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="javascript:void(0)">Authenticator App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="ms-4 p-4"><a href="/Dashboard/Display">Dashboard</a></li>
+                    @if (User.IsInRole("admin"))
+                    {
+                        <li><a href="/Admin/Display">Admin Page</a></li>
+                    }
+                    <li class="ms-4 p-4 "><a href="/UserAuthentication/Logout/">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+  
+    <div class="container">
+            @RenderBody()
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+</body>
+</html>
