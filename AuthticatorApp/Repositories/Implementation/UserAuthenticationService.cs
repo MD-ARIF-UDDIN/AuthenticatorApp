@@ -113,7 +113,7 @@ namespace AuthticatorApp.Repositories.Implementation
 			}
 
 			status.StatusCode = 1;
-			status.Message = "user registered successfully";
+			status.Message = "user registered successfully.Login now to continue.";
 			return status;
 		}
 

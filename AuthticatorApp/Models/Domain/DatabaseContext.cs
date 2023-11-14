@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using AuthticatorApp.Models.DTO;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace AuthticatorApp.Models.Domain
@@ -11,6 +12,6 @@ namespace AuthticatorApp.Models.Domain
 		}
 
 
-
+		public DbSet<RegistrationModel> registrationModels { get; set; }
 	}
 }

@@ -10,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
 		.AddEntityFrameworkStores<DatabaseContext>()
@@ -40,5 +41,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=UserAuthentication}/{action=Login}/{id?}");
+
 
 app.Run();

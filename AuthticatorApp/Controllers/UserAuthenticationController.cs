@@ -67,14 +67,13 @@ namespace AuthticatorApp.Controllers
 		//{
 			//var model = new RegistrationModel
 			//{
-				//Username = "admin1",
 				//Name = "Arif Uddin",
-				//Email = "admin1@gmail.com",
+                //Username = "admin1@gmail.com",
 				//Password = "Admin12345#",
 			//};
             //model.Role = "admin";
 			//var result = await _service.RegistrationAsync(model);
 			//return Ok(result);
-       // }
+        //}
 	}
 }
