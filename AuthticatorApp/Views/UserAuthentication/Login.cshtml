@@ -19,20 +19,20 @@
 
 </head>
 <body>
-    <
+    
     <div class="container mt-5">
         <form asp-action="Login" method="post" class="col-md-6 mx-auto bg-white p-4 rounded shadow">
 
             <h2 class="text-center text-primary mb-4">Login</h2>
 
             <div class="mb-3">
-                <label for="Username" class="form-label">Username (email)</label>
+                <label for="Username" class="font-weight-bold form-label">Username (email)</label>
                 <input type="email" asp-for="Username" class="form-control" placeholder="Enter Username(email)">
                 <div class="text-danger small" asp-validation-for="Username"></div>
             </div>
 
             <div class="mb-3">
-                <label for="Password" class="form-label">Password</label>
+                <label for="Password" class="font-weight-bold form-label">Password</label>
                 <input type="password" asp-for="Password" class="form-control" placeholder="Enter Password">
                 <div class="text-danger small" asp-validation-for="Password"></div>
             </div>
